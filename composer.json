@@ -1,0 +1,21 @@
+{
+    "name": "new/project",
+    "description": "framework",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Atheo\\Indoframe\\": "src/",
+            "app\\" : "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "atheo810",
+            "email": "atheos810@gmail.com"
+        }
+    ],
+    "require": {
+        "atheo/indoframe": "dev-dev"
+    }
+}

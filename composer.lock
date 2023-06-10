@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5b2d983ff80f2631105c9039ca6eff10",
+    "packages": [
+        {
+            "name": "atheo/indoframe",
+            "version": "dev-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atheo810/Indofame-library.git",
+                "reference": "2ffd029a24f36514ff35ab120c08ebcd546d9959"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atheo810/Indofame-library/zipball/2ffd029a24f36514ff35ab120c08ebcd546d9959",
+                "reference": "2ffd029a24f36514ff35ab120c08ebcd546d9959",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Atheo\\Indoframe\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "atheo810",
+                    "email": "atheos810@gmail.com"
+                }
+            ],
+            "description": "Library for Framework Indoframe",
+            "support": {
+                "issues": "https://github.com/atheo810/Indofame-library/issues",
+                "source": "https://github.com/atheo810/Indofame-library/tree/dev"
+            },
+            "time": "2023-06-10T00:51:13+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "atheo/indoframe": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
