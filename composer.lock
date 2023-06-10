@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atheo810/Indofame-library.git",
-                "reference": "2ffd029a24f36514ff35ab120c08ebcd546d9959"
+                "reference": "89c27ecba676dac7f7dbfcdd3a702c4d206ba146"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atheo810/Indofame-library/zipball/2ffd029a24f36514ff35ab120c08ebcd546d9959",
-                "reference": "2ffd029a24f36514ff35ab120c08ebcd546d9959",
+                "url": "https://api.github.com/repos/atheo810/Indofame-library/zipball/89c27ecba676dac7f7dbfcdd3a702c4d206ba146",
+                "reference": "89c27ecba676dac7f7dbfcdd3a702c4d206ba146",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 "issues": "https://github.com/atheo810/Indofame-library/issues",
                 "source": "https://github.com/atheo810/Indofame-library/tree/dev"
             },
-            "time": "2023-06-10T00:51:13+00:00"
+            "time": "2023-06-10T16:30:05+00:00"
         }
     ],
     "packages-dev": [],
