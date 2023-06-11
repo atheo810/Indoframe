@@ -16,6 +16,6 @@
         }
     ],
     "require": {
-        "atheo/indoframe": "dev-dev"
+        "atheo/indoframe": "v0.02"
     }
 }
