@@ -78,7 +78,11 @@ function removePublicDirectory($path, $publicDir)
 
     return $path;
 }
+$start = microtime(true);
 
 $router = require_once APPPATH . '/Routes/routes.php';
 
 $router->run();
+$end = microtime(true);
+$time = $end - $start;
+echo "Waktu request: " . $time . " detik";
