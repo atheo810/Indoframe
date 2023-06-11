@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b2d983ff80f2631105c9039ca6eff10",
+    "content-hash": "db8d354d5f7e80954f0698810f4d75e4",
     "packages": [
         {
             "name": "atheo/indoframe",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atheo810/Indofame-library.git",
-                "reference": "89c27ecba676dac7f7dbfcdd3a702c4d206ba146"
+                "reference": "7c7c684a4eaf67e3592a13c8170d0cd48cc344fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atheo810/Indofame-library/zipball/89c27ecba676dac7f7dbfcdd3a702c4d206ba146",
-                "reference": "89c27ecba676dac7f7dbfcdd3a702c4d206ba146",
+                "url": "https://api.github.com/repos/atheo810/Indofame-library/zipball/7c7c684a4eaf67e3592a13c8170d0cd48cc344fc",
+                "reference": "7c7c684a4eaf67e3592a13c8170d0cd48cc344fc",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 "issues": "https://github.com/atheo810/Indofame-library/issues",
                 "source": "https://github.com/atheo810/Indofame-library/tree/dev"
             },
-            "time": "2023-06-10T16:30:05+00:00"
+            "time": "2023-06-11T06:58:00+00:00"
         }
     ],
     "packages-dev": [],
