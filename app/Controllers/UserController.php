@@ -12,9 +12,9 @@ class UserController extends BaseController
     {
         $mysql = new MySQLConnection();
         $userModel = new UserModel($mysql);
-        $userModel->findAll();
+        $users = $userModel->findAll();
         $data = [
-            $userModel,
+            'users' => $users,
         ];
         // Lakukan sesuatu dengan data pengguna yang ditemukan
 
@@ -38,11 +38,6 @@ class UserController extends BaseController
         //     'age' => 30
         // ];
         // $update = $sql->table("tabel_update")->update($data)->where(['id' => 1]);
-
-
-        // $query = "SELECT * FROM users";
-        // $result = $connection->query($query);
-        // $rows = $result->fetchAll();
 
         // $execte = $connection->table("users")->select()->where(["id" => 2])->execute()->fetchAll();
 
