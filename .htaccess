@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /buatframework/atheo
+
+    # Remove public directory from URL
+    RewriteCond %{REQUEST_URI} !^/public/
+
+    # Rewrite all requests to the public folder
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>

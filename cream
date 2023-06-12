@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+// Autoload file from composer
+require __DIR__ . '/vendor/autoload.php';
+
+// Gunakan namespace dan class sesuai dengan library Anda
+use Atheo\Indoframe\Core\Cream;
+
+// create new instance Cream and run match method
+$cream = new Cream();
+$cream->run();
+
