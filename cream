@@ -4,10 +4,62 @@
 // Autoload file from composer
 require __DIR__ . '/vendor/autoload.php';
 
-// Gunakan namespace dan class sesuai dengan library Anda
+// Use namespace and class according to your library
 use Atheo\Indoframe\Core\Cream;
 
-// create new instance Cream and run match method
-$cream = new Cream();
-$cream->run();
+// Get arguments from command line
+$arguments = $argv;
+array_shift($arguments); // Remove script name from arguments
 
+// Get command from arguments
+$command = !empty($arguments) ? array_shift($arguments) : null;
+
+switch ($command) {
+    case 'make:controller':
+        // Get controller name from second argument
+        $controllerName = !empty($arguments) ? array_shift($arguments) : null;
+
+        if ($controllerName) {
+            // Generate controller class name
+            $controllerClassName = ucwords($controllerName) . 'Controller';
+
+            // Generate controller file path
+            $controllerFilePath = 'app/Controllers/' . $controllerClassName . '.php';
+
+            // Check if controller file already exists
+            if (file_exists($controllerFilePath)) {
+                echo "Controller already exists.\n";
+            } else {
+                // Generate controller template
+                $controllerTemplate = <<<EOT
+<?php
+
+namespace app\Controllers;
+
+class $controllerClassName
+{
+    public function index()
+    {
+        // Logic for index method
+    }
+    
+    // Add more methods as needed
+}
+EOT;
+
+                // Create new controller file
+                file_put_contents($controllerFilePath, $controllerTemplate);
+
+                echo "Controller created successfully.\n";
+            }
+        } else {
+            echo "Controller name not specified.\n";
+        }
+        break;
+
+    default:
+        // Create new instance of Cream and run the application
+        $cream = new Cream();
+        $cream->run();
+        break;
+}
