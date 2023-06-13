@@ -4,62 +4,17 @@
 // Autoload file from composer
 require __DIR__ . '/vendor/autoload.php';
 
-// Use namespace and class according to your library
-use Atheo\Indoframe\Core\Cream;
+use app\Core\Cream;
+use app\Core\Console\ServeCommand;
+use app\Core\Console\MakeControllerCommand;
+use app\Core\Console\MakeViewCommand;
+use app\Core\Console\MakeModelCommand;
 
-// Get arguments from command line
-$arguments = $argv;
-array_shift($arguments); // Remove script name from arguments
+$cream = new Cream();
 
-// Get command from arguments
-$command = !empty($arguments) ? array_shift($arguments) : null;
+$cream->registerCommand(new ServeCommand());
+$cream->registerCommand(new MakeControllerCommand());
+$cream->registerCommand(new MakeViewCommand());
+$cream->registerCommand(new MakeModelCommand());
 
-switch ($command) {
-    case 'make:controller':
-        // Get controller name from second argument
-        $controllerName = !empty($arguments) ? array_shift($arguments) : null;
-
-        if ($controllerName) {
-            // Generate controller class name
-            $controllerClassName = ucwords($controllerName) . 'Controller';
-
-            // Generate controller file path
-            $controllerFilePath = 'app/Controllers/' . $controllerClassName . '.php';
-
-            // Check if controller file already exists
-            if (file_exists($controllerFilePath)) {
-                echo "Controller already exists.\n";
-            } else {
-                // Generate controller template
-                $controllerTemplate = <<<EOT
-<?php
-
-namespace app\Controllers;
-
-class $controllerClassName
-{
-    public function index()
-    {
-        // Logic for index method
-    }
-    
-    // Add more methods as needed
-}
-EOT;
-
-                // Create new controller file
-                file_put_contents($controllerFilePath, $controllerTemplate);
-
-                echo "Controller created successfully.\n";
-            }
-        } else {
-            echo "Controller name not specified.\n";
-        }
-        break;
-
-    default:
-        // Create new instance of Cream and run the application
-        $cream = new Cream();
-        $cream->run();
-        break;
-}
+$cream->run();
