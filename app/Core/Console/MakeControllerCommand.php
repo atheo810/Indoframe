@@ -30,7 +30,7 @@ class $controllerName extends BaseController
 }
 EOT;
 
-        $controllerFile = __DIR__ . "/../../Controllers/$controllerName" . "Controller.php";
+        $controllerFile = CONTROLLERPATH . $controllerName . "Controller.php";
 
         if (file_exists($controllerFile)) {
             echo "Controller file already exist." . PHP_EOL;

@@ -46,6 +46,11 @@ if(!defined('VIEWPATH')){
     define('VIEWPATH',  realpath(rtrim($paths->viewDirectory, '\\/')) . DIRECTORY_SEPARATOR);
 }
 
+// The path to the views directory
+if(!defined('CONTROLLERPATH')){
+    define('CONTROLLERPATH',  realpath(rtrim($paths->controllerDirectory, '\\/')) . DIRECTORY_SEPARATOR);
+}
+
 /**
  * ============================================================
  * GRAB CONSTANTS

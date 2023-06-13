@@ -2,13 +2,20 @@
 <?php
 
 // Autoload file from composer
-require __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
+require_once './app/Config/Paths.php';
 
 use app\Core\Cream;
 use app\Core\Console\ServeCommand;
 use app\Core\Console\MakeControllerCommand;
 use app\Core\Console\MakeViewCommand;
 use app\Core\Console\MakeModelCommand;
+
+// instance Paths
+$paths = new Indoframe\Config\Paths();
+
+// Location of the Framework bootstrap file.
+require rtrim($paths->appDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstrap.php';
 
 $cream = new Cream();
 

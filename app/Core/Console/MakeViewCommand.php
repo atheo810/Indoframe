@@ -15,7 +15,7 @@ class MakeViewCommand extends Command
         }
 
         $viewName = $input[1];
-        $viewFile = __DIR__ . "/../../Views/$viewName.php";
+        $viewFile = VIEWPATH . $viewName. ".php";
 
         if (file_exists($viewFile)) {
             echo "File view already exist." . PHP_EOL;

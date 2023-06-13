@@ -68,8 +68,18 @@ class Paths
      *
      * This variable must contain the name of the directory that
      * contains the view files used by your application. By
-     * default this is in `app/Views`. This value
-     * is used when no value is provided to `Services::renderer()`.
+     * default this is in `app/Views`
      */
     public string $viewDirectory = __DIR__ . '/../Views';
+
+    /**
+     * ---------------------------------------------------------------
+     * Controller DIRECTORY NAME
+     * ---------------------------------------------------------------
+     *
+     * This variable must contain the name of the directory that
+     * contains the Controller files used by your application. By
+     * default this is in `app/Controller`
+     */
+    public string $controllerDirectory = __DIR__ . '/../Controllers';
 }
