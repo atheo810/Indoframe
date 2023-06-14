@@ -46,9 +46,14 @@ if(!defined('VIEWPATH')){
     define('VIEWPATH',  realpath(rtrim($paths->viewDirectory, '\\/')) . DIRECTORY_SEPARATOR);
 }
 
-// The path to the views directory
+// The path to the Controller directory
 if(!defined('CONTROLLERPATH')){
     define('CONTROLLERPATH',  realpath(rtrim($paths->controllerDirectory, '\\/')) . DIRECTORY_SEPARATOR);
+}
+
+// The path to the Model directory
+if(!defined('MODELPATH')){
+    define('MODELPATH',  realpath(rtrim($paths->modelDirectory, '\\/')) . DIRECTORY_SEPARATOR);
 }
 
 /**

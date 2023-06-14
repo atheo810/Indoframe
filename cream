@@ -10,6 +10,11 @@ use app\Core\Console\ServeCommand;
 use app\Core\Console\MakeControllerCommand;
 use app\Core\Console\MakeViewCommand;
 use app\Core\Console\MakeModelCommand;
+use app\Core\Console\MakeMVCCommand;
+use app\Core\Console\DeleteViewCommand;
+use app\Core\Console\DeleteControllerCommand;
+use app\Core\Console\DeleteModelCommand;
+use app\Core\Console\DeleteMVCCommand;
 
 // instance Paths
 $paths = new Indoframe\Config\Paths();
@@ -19,9 +24,15 @@ require rtrim($paths->appDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'bootstrap.p
 
 $cream = new Cream();
 
+// Register Command goes here
 $cream->registerCommand(new ServeCommand());
 $cream->registerCommand(new MakeControllerCommand());
 $cream->registerCommand(new MakeViewCommand());
 $cream->registerCommand(new MakeModelCommand());
+$cream->registerCommand(new MakeMVCCommand());
+$cream->registerCommand(new DeleteViewCommand());
+$cream->registerCommand(new DeleteControllerCommand());
+$cream->registerCommand(new DeleteModelCommand());
+$cream->registerCommand(new DeleteMVCCommand());
 
 $cream->run();

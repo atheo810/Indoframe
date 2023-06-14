@@ -33,7 +33,7 @@ class $modelName extends BaseModel
 }
 EOT;
 
-        $modelFile = __DIR__ . "/../../Models/$modelName" . "Model.php";
+        $modelFile = MODELPATH . $modelName . "Model.php";
 
         if (file_exists($modelFile)) {
             echo "Model file already exists." . PHP_EOL;

@@ -82,4 +82,15 @@ class Paths
      * default this is in `app/Controller`
      */
     public string $controllerDirectory = __DIR__ . '/../Controllers';
+
+    /**
+     * ---------------------------------------------------------------
+     * Model DIRECTORY NAME
+     * ---------------------------------------------------------------
+     *
+     * This variable must contain the name of the directory that
+     * contains the Controller files used by your application. By
+     * default this is in `app/Models`
+     */
+    public string $modelDirectory = __DIR__ . '/../Models';
 }
