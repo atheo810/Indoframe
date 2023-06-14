@@ -19,18 +19,22 @@ class MakeModelCommand extends Command
 <?php
 
 namespace app\Models;
-
-use Atheo\Indoframe\Core\Database\BaseConnection;
+        
+use Atheo\Indoframe\Core\Database\MySQLConnection;
 use Atheo\Indoframe\Models\BaseModel;
-
+        
 class $modelName extends BaseModel
 {
-    public function __construct(BaseConnection \$connection)
+    public static function create()
     {
-        \$this->table = "$modelName";
-        parent::__construct(\$connection);
+        \$connection = new MySQLConnection();
+        \$table = '$modelName';
+        self::init(\$connection, \$table);
+        return self::class;
     }
+
 }
+        
 EOT;
 
         $modelFile = MODELPATH . $modelName . "Model.php";

@@ -9,6 +9,6 @@ class HomeController extends BaseController{
         $data = [
             "title" => "Selamat Datang"
         ];
-        $this->view('Home.index', $data);
+        $this->view('HomeView', $data);
     }
 }
