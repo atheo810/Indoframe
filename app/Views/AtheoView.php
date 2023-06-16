@@ -7,7 +7,10 @@
 </head>
 <body>
     <h1>Selamat datang</h1>
+    <pre>
     <?php var_dump($data); ?>
+    </pre>
+    <a href="/home">Silahkan masuk ke Beranda</a>
     
 </body>
 </html>

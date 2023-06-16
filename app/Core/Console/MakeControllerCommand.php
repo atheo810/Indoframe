@@ -20,6 +20,7 @@ class MakeControllerCommand extends Command
 
 namespace app\Controllers;
 use Atheo\Indoframe\Core\Http\BaseController;
+use PDO;
 
 class $controllerName extends BaseController
 {

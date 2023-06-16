@@ -11,10 +11,13 @@ use app\Core\Console\MakeControllerCommand;
 use app\Core\Console\MakeViewCommand;
 use app\Core\Console\MakeModelCommand;
 use app\Core\Console\MakeMVCCommand;
+use app\Core\Console\MakeSeederCommand;
 use app\Core\Console\DeleteViewCommand;
 use app\Core\Console\DeleteControllerCommand;
 use app\Core\Console\DeleteModelCommand;
 use app\Core\Console\DeleteMVCCommand;
+use app\Core\Console\DeleteSeederCommand;
+use app\Core\Console\RunUserSeederCommand;
 
 // instance Paths
 $paths = new Indoframe\Config\Paths();
@@ -30,9 +33,13 @@ $cream->registerCommand(new MakeControllerCommand());
 $cream->registerCommand(new MakeViewCommand());
 $cream->registerCommand(new MakeModelCommand());
 $cream->registerCommand(new MakeMVCCommand());
+$cream->registerCommand(new MakeSeederCommand());
 $cream->registerCommand(new DeleteViewCommand());
 $cream->registerCommand(new DeleteControllerCommand());
 $cream->registerCommand(new DeleteModelCommand());
 $cream->registerCommand(new DeleteMVCCommand());
+$cream->registerCommand(new DeleteSeederCommand());
+$cream->registerCommand(new RunUserSeederCommand());
+
 
 $cream->run();
